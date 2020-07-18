@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C6C3C3"  
+    >
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/botronview"
+        android:id="@+id/lnchinh">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/ln1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thống kê"
+                android:layout_gravity="center"
+                android:textColor="#1C1B1B"
+                android:textSize="18dp"
+                android:id="@+id/lab1"/>
+            <com.github.mikephil.charting.charts.BarChart
+                android:layout_width="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="140dp"
+                android:id="@+id/barNgay"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_toRightOf="@id/ln1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textColor="#1C1B1B"
+                android:layout_height="wrap_content"
+                android:text="Hôm nay"/>
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sang" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#1C1B1B"
+                        android:layout_marginLeft="10dp"
+                        android:text="Buổi sáng"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:id="@+id/txtSang"
+                        android:textColor="#C12752"
+                        android:text="100.000 VNĐ"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/chieu" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#1C1B1B"
+                        android:text="Buổi chiều"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:id="@+id/txtChieu"
+                        android:textColor="#ff6600"
+                        android:text="250.000 VNĐ"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/toi" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#1C1B1B"
+                        android:text="Buổi tối"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="70dp"
+                        android:id="@+id/txtToi"
+                        android:textColor="#f5c700"
+                        android:text="560.000 VNĐ" />
+
+                </TableRow>
+
+                <View style="@style/Divider.Horizontal"
+                    android:background="#5BCDC2C2"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="150dp"/>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_span="2"
+                        android:textSize="16dp"
+                        android:textColor="#F00000"
+                        android:text="Tổng cộng"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
+                        android:id="@+id/txtTong"
+                        android:textColor="#F00000"
+                        android:textSize="16dp"
+                        android:text="560.000 VNĐ" />
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <!--    <View style="@style/Divider.Horizontal"-->
+    <!--        android:layout_width="300dp"-->
+    <!--        android:background="#5BCDC2C2"-->
+    <!--        android:id="@+id/line2"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:layout_below="@id/lnchinh" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/lntuan"
+        android:layout_marginTop="2dp"
+        android:layout_below="@id/lnchinh"
+        android:background="@drawable/botronview"
+        >
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:textColor="#1C1B1B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thống kê theo tuần"/>
+        <com.github.mikephil.charting.charts.BarChart
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/barTuan"
+            />
+
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_marginTop="2dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/lntuan"-->
+<!--        android:id="@+id/lnButton"-->
+<!--        android:background="@drawable/botronview">-->
+
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Ngày bắt dầu"-->
+<!--            android:id="@+id/btnBD"/>-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Ngày Kết thúc"-->
+<!--            android:id="@+id/btnKT"/>-->
+<!--    </LinearLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lntuan"
+        android:orientation="vertical"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/botronview">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#1C1B1B"
+            android:text="Thống kê theo tháng"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"/>
+        <com.github.mikephil.charting.charts.LineChart
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/linechart"/>
+
+    </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

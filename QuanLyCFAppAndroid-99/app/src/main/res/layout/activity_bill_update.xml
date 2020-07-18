@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/tlb1TS"
+        android:elevation="4dp"
+        android:background="#4BA157"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hóa đơn"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/textTile"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="5dp">
+        <TextView
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:textColor="#1C1B1B"
+            android:text="Món"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#1C1B1B"
+            android:text="S.lượng"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#1C1B1B"
+            android:text="Giá"
+            android:textSize="20dp"/>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lstbillTS"
+        android:layout_width="match_parent"
+        android:layout_height="393dp"
+        android:layout_below="@id/thongke"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="19"
+
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:paddingTop="15dp"
+        android:layout_below="@id/lstbillTS"
+        >
+
+<!--        <TableRow-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/bill_kevien"-->
+<!--            >-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Giá tiền: "-->
+<!--                android:textColor="#1C1B1B"-->
+<!--                android:textSize="20dp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txtgiatienTS"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:minWidth="180dp"-->
+<!--                android:textColor="#03A9F4"-->
+<!--                android:textAlignment="center"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:textSize="20dp"/>-->
+
+<!--            &lt;!&ndash;            <TextView&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:text=" VNĐ"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:textSize="20dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:textStyle="bold"/>&ndash;&gt;-->
+<!--        </TableRow>-->
+<!--        <LinearLayout-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:background="@drawable/bill_kevien">-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Giảm giá: "-->
+<!--                android:textSize="20dp"-->
+<!--                android:textColor="#1C1B1B"-->
+<!--                android:textStyle="bold"-->
+<!--                />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/txtgiamgiaTS"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:inputType="number"-->
+<!--                android:textSize="20dp"-->
+<!--                android:minWidth="40dp"-->
+<!--                android:maxLength="3"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text=" %"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="20dp" />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Phí dv: "-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="#1C1B1B"-->
+<!--                android:textSize="20dp"-->
+<!--                android:layout_marginLeft="25dp"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="20dp"-->
+<!--                android:textColor="#1C1B1B"-->
+<!--                android:text="2000 VNĐ"-->
+<!--                android:gravity="right"/>-->
+<!--            &lt;!&ndash;            <TextView&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:text=" VNĐ"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:textStyle="bold"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:textSize="20dp" />&ndash;&gt;-->
+<!--        </LinearLayout>-->
+
+        <View style="@style/Divider.Horizontal"
+            android:background="#5BCDC2C2"
+
+            android:layout_marginTop="10dp"
+            android:layout_width="100dp"/>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#F00000"
+                android:text="Tổng cộng: "
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/txttongtienTS"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:minWidth="180dp"
+                android:textStyle="bold"
+                android:textColor="#03A9F4"
+                android:textSize="20dp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:background="#4BA157">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/btnClearTS"
+            android:textColor="#fff"
+            android:text="Xóa tất cả"
+            android:textSize="20dp"
+            android:background="@drawable/designbutton"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cập nhật"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/designbutton"
+            android:textAllCaps="false"
+            android:id="@+id/btnCapNhatTS"/>
+    </LinearLayout>
+</LinearLayout>

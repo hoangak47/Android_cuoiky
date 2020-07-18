@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.quanlyquancf">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/iconand"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/iconand"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon"
+        >
+        <activity android:name=".Lop.ThongKe"></activity>
+<!--        <activity android:name=".Lop.Thongke" />-->
+        <activity android:name=".Lop.BillUpdate" />
+        <activity android:name=".Lop.Themon"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity
+            android:name=".Lop.Table"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Lop.BillActivity" />
+        <activity android:name=".Lop.ThanhtoanActivity" />
+        <activity android:name=".Lop.ProfileActivity" />
+        <activity android:name=".Lop.LoginAccount">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Lop.FoodActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+
+        <provider
+            tools:replace="android:authorities"
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.com.ibm.watson.developer_cloud.android.provider"/>
+    </application>
+
+</manifest>

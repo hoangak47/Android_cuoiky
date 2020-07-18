@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "389539968936",
+    "firebase_url": "https://logincf-2f273.firebaseio.com",
+    "project_id": "logincf-2f273",
+    "storage_bucket": "logincf-2f273.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389539968936:android:9684fb7187596efee3cf9d",
+        "android_client_info": {
+          "package_name": "com.example.quanlyquancf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389539968936-comqv89pql9ile3c4m46uau3sll2hu86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0lWJEfSa3rg9j0OkqZWTCLG74O1sei7c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389539968936-comqv89pql9ile3c4m46uau3sll2hu86.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

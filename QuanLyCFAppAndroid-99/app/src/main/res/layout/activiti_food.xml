@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout_food"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/tlb1"
+            android:elevation="4dp"
+            android:background="#4BA157"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Danh sách món ăn"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:id="@+id/textTile"
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/thongke"
+            android:layout_below="@id/tlb1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đang chọn: "
+                android:textSize="20dp"
+                android:layout_weight="0"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDangChon"
+                android:textColor="#03A9F4"
+                android:textSize="20dp"
+                android:layout_weight="2"/>
+<!--            <Button-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="Bill"-->
+<!--                android:textSize="20dp"-->
+<!--                android:id="@+id/bill"-->
+<!--                android:background="@drawable/bogoc"-->
+<!--                android:textAllCaps="false"/>-->
+            <!--                android:background="@drawable/bo_goc"-->
+
+
+
+<!--            <Spinner-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_gravity="end"-->
+<!--                android:id="@+id/category"-->
+<!--                android:layout_weight="1"-->
+<!--                />-->
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/thongke"
+            android:layout_weight="50"
+
+            ></androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:background="#4BA157">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:drawableLeft="@drawable/back2"
+                android:text="Trở về"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:id="@+id/btnChonLai"
+                android:background="@drawable/designbutton"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hóa đơn"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/designbutton"
+                android:drawableRight="@drawable/pay1"
+                android:textAllCaps="false"
+                android:id="@+id/btnXNBill"/>
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+    <!--    <com.google.android.material.navigation.NavigationView-->
+    <!--        android:id="@+id/nav_view"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_gravity="start"-->
+    <!--        app:headerLayout="@layout/nav_header"-->
+    <!--        app:menu="@menu/drawer_menu"/>-->
+</androidx.drawerlayout.widget.DrawerLayout>
